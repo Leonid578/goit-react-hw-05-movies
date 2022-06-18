@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import NotFoundView from './views/NotFoundView';
 import { lazy } from 'react';
 // import MoviesPage from './MoviesPage/MoviesPage';
-// import HomeView from './views/HomeView';
+// import HomeView from './HomeView/HomeView';
 // import MovieDetailsPage from './MovieDetailsPage/MovieDetailsPage'
 
 const MoviesPage = lazy(() => import('./MoviesPage/MoviesPage'));

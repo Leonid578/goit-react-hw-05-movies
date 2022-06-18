@@ -1,6 +1,6 @@
 import { useState, useEffect, Suspense } from 'react'
-import { TitleFilm, BigPoster, BoxPoster, Overview, } from './MovieDetailsPage.styled'
-import { useParams, useNavigate, Outlet, useLocation, Link } from 'react-router-dom' 
+import { TitleFilm, BigPoster, BoxPoster, Overview, Link } from './MovieDetailsPage.styled'
+import { useParams, useNavigate, Outlet, useLocation } from 'react-router-dom' 
 // import { Button } from '@mui/material';
 import { findFilmsInfo } from '../views/fetchAPI';
 // import { linkActiv } from '../';
@@ -19,9 +19,9 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <buttin onClick={() => {
+      <button onClick={() => {
           navig(location?.state?.from ?? '/');
-        }} variant='contained' sx={{mb: '10px'}}>Back</buttin>
+        }} variant='contained' sx={{mb: '10px'}}>Back</button>
       <TitleFilm>{filmInfo.original_title}</TitleFilm>
       <BoxPoster>
         {filmInfo.poster_path ? <BigPoster src={imgBaseUrl + filmInfo.poster_path} alt="" /> : <BigPoster src='https://www.jakartaplayers.org/uploads/1/2/5/5/12551960/2297419_orig.jpg' alt="" />}

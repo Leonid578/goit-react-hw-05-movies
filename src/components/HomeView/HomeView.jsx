@@ -19,7 +19,7 @@ const HomeView = props => {
     <>
       <h2>Popular films of the day</h2>
 
-      {/* {console.log(popular)} */}
+      {console.log(popular)}
       {popular.length > 0 && (
         <BoxFilms>
           {popular.map(film => {

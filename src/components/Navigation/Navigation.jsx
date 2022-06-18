@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import {
   Link,
   Header,
@@ -9,7 +9,7 @@ import {
   Footer,
   DateWork,
 } from './Navigation.style';
-// import { linkActiv } from 'utilits/linkActive';
+
 
 export const Navigation = () => {
   return (
