@@ -8,7 +8,7 @@ import FilmCard from 'components/FilmCard/FilmCard';
 
 const MoviesPage = () => {
     const [arreyFilms, SetArreyFilms] = useState([])
-    let [searchParams, setSearchParams] = useSearchParams(); // СОЗДАЕМ ОБЪЕКТ ПРИ ВВОДЕ ПОИКОВОГО СЛОВА
+    let [searchParams, setSearchParams] = useSearchParams(); // СОЗДАЕМ ОБЪЕКТ ПРИ ВВОДЕ ПОИCКОВОГО СЛОВА
     const location = useLocation();
   
     // Тут следим за вводом поискового слова в инпут сохраняем тут же в параметры для запроса
@@ -21,13 +21,13 @@ const MoviesPage = () => {
     };
   
     //вынесли запрос для переиспользования в сабмите и юзэффекте
-    const eventNo = () => {
-       const search = location.search;
-      const searchQuery = searchParams.get('query');
-      findFilmsTitle(searchQuery, search).then((r)=>{
-        SetArreyFilms(r.results);
-      })
-    }
+  const eventNo = () => {
+     const search = location.search;
+    const searchQuery = searchParams.get('query');
+    findFilmsTitle(searchQuery, search).then((r)=>{
+      SetArreyFilms(r.results);
+    })
+  }
   
     // обрабатываем данные формы и получаем массив фильмов
     const formSubmit = event => {

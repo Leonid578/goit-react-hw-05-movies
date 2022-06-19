@@ -1,9 +1,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import { TitleFilm, BigPoster, BoxPoster, Overview, Link } from './MovieDetailsPage.styled'
 import { useParams, useNavigate, Outlet, useLocation } from 'react-router-dom' 
-// import { Button } from '@mui/material';
 import { findFilmsInfo } from '../views/fetchAPI';
-// import { linkActiv } from '../';
 const imgBaseUrl = 'https://image.tmdb.org/t/p/w300';
 
 const MovieDetailsPage = () => {
@@ -11,6 +9,7 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams()
   let navig = useNavigate()
   let location = useLocation()
+  const verification = location?.state?.from ?? '/';
 
   useEffect(() => {
     findFilmsInfo(movieId).then((r)=>{
@@ -20,7 +19,7 @@ const MovieDetailsPage = () => {
   return (
     <>
       <button onClick={() => {
-          navig(location?.state?.from ?? '/');
+          navig(verification);
         }} variant='contained' sx={{mb: '10px'}}>Back</button>
       <TitleFilm>{filmInfo.original_title}</TitleFilm>
       <BoxPoster>
@@ -31,8 +30,8 @@ const MovieDetailsPage = () => {
           <Overview><h3>Vote average: </h3>{filmInfo.vote_average}</Overview>
         </div>
       </BoxPoster>
-      <Link to='cast' state={{ from: location?.state?.from ?? '/' }}>cast</Link>
-      <Link to='reviews' state={{ from: location?.state?.from ?? '/' }}>reviews</Link>
+      <Link to='cast' state={{ from: verification }}>cast</Link>
+      <Link to='reviews' state={{ from: verification }}>reviews</Link>
       <Suspense fallback={<h1>Wite one more...</h1>}>
         <Outlet context={[filmInfo]} />
       </Suspense>
