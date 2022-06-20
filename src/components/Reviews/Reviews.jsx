@@ -4,7 +4,7 @@ const Reviews = props => {
   const [filmInfo] = useOutletContext()
 
   return (
-    <>
+    <div id="myDiv">
       <h3>Reviews</h3>
       <ul>
         {filmInfo.reviews ? filmInfo.reviews.results.map((review) => {
@@ -14,7 +14,7 @@ const Reviews = props => {
           </li>
         }) : <p>loading</p>}
       </ul>
-</>
+</div>
   )
 }
 

@@ -1,10 +1,11 @@
 import { Navigation } from './Navigation/Navigation';
 import { Route, Routes } from 'react-router-dom';
-import NotFoundView from './views/NotFoundView';
+import NotFoundView from 'views/NotFoundView';
 import { lazy } from 'react';
+// import {HomeView} from './HomeView/HomeView';
 
 const MoviesPage = lazy(() => import('./MoviesPage/MoviesPage'));
-const HomeView = lazy(() => import('./views/HomeView'));
+const HomeView = lazy(() => import("./HomeView/HomeView"));
 const MovieDetailsPage = lazy(() =>import('./MovieDetailsPage/MovieDetailsPage'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));

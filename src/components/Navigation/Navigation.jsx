@@ -24,6 +24,7 @@ export const Navigation = () => {
           </Link>
         </Conteiner>
       </Header>
+      
       <Content>
         <Conteiner>   
           <Suspense>
@@ -31,6 +32,7 @@ export const Navigation = () => {
           </Suspense>
         </Conteiner>
       </Content>
+
       <Footer>
         <Conteiner>
           <DateWork>goit-react-hw-05-movies</DateWork>

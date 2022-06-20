@@ -1,7 +1,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import { TitleFilm, BigPoster, BoxPoster, Overview, Link } from './MovieDetailsPage.styled'
 import { useParams, useNavigate, Outlet, useLocation } from 'react-router-dom' 
-import { findFilmsInfo } from '../views/fetchAPI';
+import { findFilmsInfo } from 'views/fetchAPI';
 const imgBaseUrl = 'https://image.tmdb.org/t/p/w300';
 
 const MovieDetailsPage = () => {

@@ -1,6 +1,6 @@
 import { AiOutlineSearch } from 'react-icons/ai';
 import { SerchForm, SerchButton, InputWord, BoxFilms } from './MoviesPage.style';
-import { findFilmsTitle } from '../views/fetchAPI';
+import { findFilmsTitle } from 'views/fetchAPI';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams,  useLocation } from 'react-router-dom'
 import FilmCard from 'components/FilmCard/FilmCard';
@@ -38,7 +38,6 @@ const MoviesPage = () => {
       // отправляем данные запроса если нас вернуло и в памяти есть поисковое слово
     useEffect(() => {
       eventNo()
-   
     }, [eventNo])
   
     return (

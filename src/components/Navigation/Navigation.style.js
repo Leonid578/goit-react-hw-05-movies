@@ -52,9 +52,6 @@ font-weight: 500;
 `
 
 
-
-
-
 export const BoxFilms = styled.ul` 
  display: grid;
 /* max-width: calc(100vw - 48px); */

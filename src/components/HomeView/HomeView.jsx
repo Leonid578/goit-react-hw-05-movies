@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { findPopularFilms } from './fetchAPI';
+import { findPopularFilms } from 'views/fetchAPI';
 import {BoxFilms} from '../Navigation/Navigation.style'
 
 import { FilmCard } from '../FilmCard/FilmCard.jsx';
