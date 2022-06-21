@@ -17,4 +17,4 @@ FilmCard.propTypes = {
     title: PropTypes.string,
 }
   
-// export default FilmCard
+export default FilmCard

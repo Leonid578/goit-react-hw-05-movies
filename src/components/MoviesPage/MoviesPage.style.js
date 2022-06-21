@@ -8,12 +8,13 @@ justify-content: center;
 
  export const SerchButton = styled.button`
 background-color: transparent;
-width: 20px;
-height: 20px;
+width: 30px;
+height: 30px;
 border: none;
-opacity: 0.7;
+opacity: 0.8;
 :hover {
     opacity: 1;
+    cursor: pointer;
   }
 ` 
 
