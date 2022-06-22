@@ -1,4 +1,4 @@
-import { Poster, FilmTitle, CardFilm } from './FilmCard'
+import { Poster, FilmTitle, CardFilm } from './FilmCard.styled'
 import PropTypes from 'prop-types'
 const imgBaseUrl = 'https://image.tmdb.org/t/p/w300';
 

@@ -1,21 +1,28 @@
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext } from 'react-router-dom';
+import { Header, Description,ReviewsList } from './Reviews.styled';
 
 const Reviews = props => {
-  const [filmInfo] = useOutletContext()
+  const [filmInfo] = useOutletContext();
 
   return (
     <>
-      <h3>Reviews</h3>
-      <ul>
-        {filmInfo.reviews ? filmInfo.reviews.results.map((review) => {
-          return <li key={review.id}>
-            <h4>{review.author}</h4>
-           <p> {review.content} </p>
-          </li>
-        }) : <p>loading</p>}
-      </ul>
-</>
-  )
-}
+      <Header>Reviews</Header>
+      <ReviewsList>
+        {filmInfo.reviews ? (
+          filmInfo.reviews.results.map(review => {
+            return (
+              <Description key={review.id}>
+                <h4>{review.author}</h4>
+                <p> {review.content} </p>
+              </Description>
+            );
+          })
+        ) : (
+          <p>loading</p>
+        )}
+      </ReviewsList>
+    </>
+  );
+};
 
-export default Reviews
+export default Reviews;
